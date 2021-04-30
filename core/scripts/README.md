@@ -43,9 +43,13 @@ $ #docker run --rm -u `id -u`:`id -g` -v `pwd`:`pwd` -w `pwd` xuper/centos-build
 $ # ubuntu environment
 $ docker run --rm -u `id -u`:`id -g` -v `pwd`:`pwd` -w `pwd` xuper/ubuntu-builder:0.1 make
 
+```
 
-root@userver7:/home/xuwei/workspace/xuperchain# docker images | grep xuper
-xuper/ubuntu-builder                           0.1                 c23e5234f198        14 months ago       677MB
-
+## 运行容器
 
 ```
+docker images | grep xuper
+xuper/ubuntu-builder                           0.1                 c23e5234f198        14 months ago       677MB
+docker run -it xuper/ubuntu-builder:0.1 /bin/bash
+```
+
